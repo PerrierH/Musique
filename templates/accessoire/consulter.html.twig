@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+    {% block body %}
+    <body>
+		<h5>PAGE DE CONSULTATION D'UN ACCESSOIRE</h5>
+  <table class="table table-blue cell-border striped">
+    <tr><td>Id : </td><td>{{accessoire.id}} </td></tr>
+  	<tr><td>libelle : </td><td>{{accessoire.libelle}}</td>
+ </table>
+    </body>
+    {% endblock %}

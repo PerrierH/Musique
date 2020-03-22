@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+    {% block body %}
+    <body>
+		<h5>PAGE DE CONSULTATION D'UN PROFESSIONNEL</h5>
+ <p>
+  <table class="table table-blue cell-border striped">
+     <tr><td>Id : </td><td>{{professionnel.id}} </td></tr>
+	<tr><td>Nom : </td><td>{{professionnel.nom}}</td>
+	<tr><td>rue : </td><td>{{professionnel.numrue}} {{professionnel.rue}}</td></tr>
+	<tr><td>code postal : </td><td>{{professionnel.copos}}</td></tr>
+	<tr><td>ville : </td><td>{{professionnel.ville}}</td></tr>
+	<tr><td>Tél : </td><td>{{professionnel.tel}}</td></tr>
+	<tr><td>Mail : </td><td>{{professionnel.mail}}</td></tr>
+ </table>
+    </body>
+</html>
+    {% endblock %}

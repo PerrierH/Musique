@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>{% block title %}Welcome!{% endblock %}</title>
+      {% block styleAndJS %}
+          <!--link href="../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../public/js/metro.js"></script>
+          <script type="text/javascript" src="../public/js/metro.js"></script-->
+      {% endblock %}
+
+
+    </head>
+    <body>
+      <ul id="nav" class="h-menu bg-cyan">
+        <li><a href="{{ path('accueil')}}">E-MUSIC</a></li>
+
+        <li><!--a href="{{ path('connexion')}}">Connexion</a--></li>
+        <li>
+      		<a class="dropdown-toggle">Intervention</a>
+
+            <ul class="d-menu" data-role="dropdown">
+
+      			<li><a href="{{ path('interventionLister')}}">Lister</a></li>
+
+      			<li><a href="{{ path('interventionAjouter')}}">Ajouter</a></li>
+
+      		</ul>
+        </li>
+        <li>
+          <a class="dropdown-toggle">Responsable</a>
+
+            <ul class="d-menu" data-role="dropdown">
+
+            <li><a href="{{ path('responsableLister')}}">Lister</a></li>
+
+            <li><a href="{{ path('responsableAjouter')}}">Ajouter</a></li>
+
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-toggle">Eleve</a>
+
+            <ul class="d-menu" data-role="dropdown">
+
+            <li><a href="{{ path('eleveLister')}}">Lister</a></li>
+
+            <li><a href="{{ path('eleveAjouter')}}">Ajouter</a></li>
+
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-toggle">Instrument</a>
+
+            <ul class="d-menu" data-role="dropdown">
+
+            <li><a href="{{ path('instrumentLister')}}">Liste instrument</a></li>
+            <li><a href="{{ path('instrumentAjouter')}}">Ajouter instrument</a></li>
+            <li><a href="{{ path('accessoireLister')}}">Liste accessoire</a></li>
+            <li><a href="{{ path('accessoireAjouter')}}">Ajouter accessoire</a></li>          
+          </ul>
+        </li>
+
+        <li>
+          <a class="dropdown-toggle">Professeur</a>
+
+            <ul class="d-menu" data-role="dropdown">
+
+            <li><a href="{{ path('professeurLister')}}">Lister</a></li>
+
+            <li><a href="{{ path('professeurAjouter')}}">Ajouter</a></li>
+
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-toggle">Professionnel</a>
+
+            <ul class="d-menu" data-role="dropdown">
+
+            <li><a href="{{ path('professionnelLister')}}">Lister</a></li>
+
+            <li><a href="{{ path('professionnelAjouter')}}">Ajouter</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="dropdown-toggle">Cours</a>
+
+            <ul class="d-menu" data-role="dropdown">
+
+            <li><a href="{{ path('coursLister')}}">Lister</a></li>
+
+            <li><a href="{{ path('coursAjouter')}}">Ajouter</a></li>
+          </ul>
+        </li>
+      </ul>
+        {% block body %}
+
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>

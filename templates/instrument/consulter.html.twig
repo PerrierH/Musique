@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+    {% block body %}
+    <body>
+		<h5>PAGE DE CONSULTATION D'UN INSTRUMENT</h5>
+  <table class="table table-blue cell-border striped">
+    <tr><td>Id : </td><td>{{instrument.id}} </td></tr>
+  	<tr><td>Numero de série : </td><td>{{instrument.numSerie}}</td>
+    <tr><td>Date achat : </td><td>{{instrument.dateAchat|date("d/m/Y")}}</td></tr>
+    <tr><td>Prix achat : </td><td>{{instrument.prixAchat}}</td></tr></tr>
+    <tr><td>utilisation : </td><td>{{instrument.utilisation}}</td></tr>
+		<tr><td>chemin de l'image : </td><td>{{instrument.cheminImage}}</td></tr>
+ </table>
+    </body>
+    {% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+{% block body %}
+{% block stylesheet %}
+<div class="container-fluid">
+          <div class="cell-md-8">
+            <div class="info-panel rounded no-overflow shadow-3">
+              <div class="info-panel-header bg-black fg-white text-bold">
+                <h3> Liste des responsables </h3>
+              </div>
+              <table class="table table-blue cell-border striped">
+                <td><strong>Nom</a></strong></td>
+                <td><strong>Prenom</strong></td>
+                <td><strong>Ville</strong></td>
+                <td><strong>Tel</strong></td>
+                <td><strong>Mail</strong></td>
+                <td><strong>Consulter</strong></td>
+                <td><strong>Consulter la liste des éleves</strong></td>
+                {% for r in pResponsable %}
+                  <tr>
+                    <td>{{ r.nom }}</td>
+                    <td>{{ r.prenom}}</td>
+                    <td>{{ r.ville}}</td>
+                    <td>{{ r.tel}}</td>
+                    <td>{{ r.mail}}</td>
+                    <td><a href="{{ path('responsableConsulter', { 'id': r.id }) }}"><button class="button primary small drop-shadow">Consulter</button></a></td>
+                    <td><a href="{{ path('responsableListerEleve', { 'idResponsable': r.id }) }}"><button class="button primary small drop-shadow">Consulter la liste des éleves</button></a></td>
+                  {% else %}
+                  <tr>
+                  <td>Aucun responsable n'a été trouvé.</td>
+                  </tr>
+                {% endfor %}
+              </table>
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+    {% block body %}
+    <body>
+		LISTE DES ELEVES</br>
+		<table>
+		{% for e in pResponsable.eleves %}
+		<tr>
+			<td>{{e.prenom }}</a></td>
+            <td>{{e.nom }}</a></td>
+            <td>{{e.numRue }}</a></td>
+            <td>{{e.rue }}</a></td>
+            <td>{{e.copos }}</a></td>
+			<td>{{e.ville }}</td>
+            <td>{{e.mail }}</td>
+	{% else %}
+		<tr>
+		<td>Aucun eleve n'a été trouvé.</td>
+		</tr>
+	{% endfor %}
+</table>
+    </body>
+    {% endblock %}

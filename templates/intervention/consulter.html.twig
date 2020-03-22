@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+    {% block body %}
+      {% block stylesheet %}
+        <body>
+    		<h5>PAGE DE CONSULTATION D'UNE INTERVENTION</h5>
+          <table class="table table-blue cell-border striped">
+            <tr><td>Id : </td><td>{{intervention.id}} </td></tr>
+            <tr><td>Date debut : </td><td>{{intervention.dateDebut}}</td>
+            <tr><td>Date fin : </td><td>{{intervention.dateFin}}</td></tr></tr>
+            <tr><td>Description : </td><td>{{intervention.descriptif}}</td></tr>
+            <tr><td>Prix : </td><td>{{intervention.prix}}</td></tr>
+          </table>
+          <a href="{{ path('interventionLister')}}">Lister</a>
+        </body>
+
+      {% endblock %}
+    {% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+    {% block body %}
+
+		<h5>PAGE DE CONSULTATION D'UN ELVE</h5>
+ <p>
+  <table class="table table-blue cell-border striped">
+     <tr><td>Id : </td><td>{{cours.id}} </td></tr>
+
+	    <tr><td>Libelle : </td><td>{{cours.libelle}}</td>
+
+     <tr><td>Age minimum : </td><td>{{cours.ageMini}}</td></tr></tr>
+
+     <tr><td>Age maximum : </td><td>{{cours.ageMaxi}}</td></tr>
+
+     <tr><td>Heure debut : </td><td>{{cours.heureDebut}}</td></tr>
+
+	   <tr><td>Heure fin : </td><td>{{cours.heureFin}}</td></tr>
+
+		 <tr><td>Nombre place : </td><td>{{cours.nbPlaces}}</td></tr>
+
+		 <tr><td>Type cour : </td><td>{{cours.typeCours}}</td></tr>
+
+	   <tr><td>Professeur : </td><td>{{cours.professeur.nom}}</td></tr>
+
+ </table>
+    {% endblock %}

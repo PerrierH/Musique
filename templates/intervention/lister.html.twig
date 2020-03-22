@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+    {% block head %}
+      {% block styleAndJS %}
+          <link href="../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+
+    {% block body %}
+      {% block stylesheet %}
+        <div class="container-fluid">
+          <div class="cell-md-8">
+            <div class="info-panel rounded no-overflow shadow-3">
+              <div class="info-panel-header bg-black fg-white text-bold">
+                <h3> Liste des interventions </h3>
+              </div>
+              <table class="table table-blue cell-border striped">
+               <tr>
+                    <td><strong>Descriptif</strong></td>
+                    <td><strong>Date de début</strong></td>
+                    <td><strong>Date de fin</strong></td>
+                    <td><strong>Consulter</strong></td>
+                </tr>
+                {% for i in pInterventions %}
+                  <tr>
+                    <td>{{ i.descriptif }}</td>
+                    <td>{{ i.dateDebut }}</td>
+                    <td>{{ i.dateFin }}</td>
+                    <td><a href="{{ path('interventionConsulter', { 'id': i.id })   }}"><button class="button primary small drop-shadow">Consulter</button></a></td>
+                      {% else %}
+                      <tr>
+                      <td>Aucune intervention n'a été trouvé.</td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    {% endblock %}

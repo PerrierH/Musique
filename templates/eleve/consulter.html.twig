@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+    {% block body %}
+
+		<h5>PAGE DE CONSULTATION D'UN ELVE</h5>
+ <p>
+  <table class="table table-blue cell-border striped">
+     <tr><td>Id : </td><td>{{eleve.id}} </td></tr>
+	   <tr><td>Nom : </td><td>{{eleve.nom}}</td>
+     <tr><td>Prénom : </td><td>{{eleve.prenom}}</td></tr></tr>
+     <tr><td>Numéro de rue : </td><td>{{eleve.numRue}}</td></tr>
+	   <tr><td>Rue : </td><td>{{eleve.rue}}</td></tr>
+		 <tr><td>Code postal : </td><td>{{eleve.copos}}</td></tr>
+		 <tr><td>Ville : </td><td>{{eleve.ville}}</td></tr>
+	   <tr><td>Numéro de téléphone : </td><td>{{eleve.tel}}</td></tr>
+	   <tr><td>Adresse Mail : </td><td>{{eleve.mail}}</td></tr>
+
+ </table>
+    {% endblock %}

@@ -1,0 +1,44 @@
+{% block title %}Inscription{% endblock %}
+
+{% block stylesheets %}
+
+
+{% endblock %}
+
+{% block contenu %}
+
+<div style="margin-top:5%" class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div>
+
+        <h1>Connexion</h1>
+        <form action="{{ path('connexion') }}" method="POST">
+
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user"><i class="far fa-user"></i></span>
+                    <input required class="uk-input" type="text" placeholder="Adresse mail" name="_username">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon uk-form-icon-flip"><i class="fas fa-key"></i></span>
+                    <input required class="uk-input" type="password" placeholder="Mot de passe" name="_password">
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <button type="submit" class="uk-button uk-button-primary">Se connecter</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="../public/js/uikit.js"></script>
+{% endblock %}

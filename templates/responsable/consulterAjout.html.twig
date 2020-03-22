@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+    {% block body %}
+    <body>
+		<h5>PAGE DE CONSULTATION D'UN RESPONSABLE</h5>
+ <p>
+  <table class="table table-blue cell-border striped">
+    <tr><td>Nom : </td><td>{{responsable.nom}}</td></tr></tr>
+    <tr><td>Prénom : </td><td>{{responsable.prenom}}</td></tr></tr>
+    <tr><td>Num rue : </td><td>{{responsable.numRue}}</td></tr></tr>
+    <tr><td>Rue : </td><td>{{responsable.rue}}</td></tr></tr>
+    <tr><td>Ville : </td><td>{{responsable.copos}}</td></tr></tr>
+    <tr><td>Code postal : </td><td>{{responsable.ville}}</td></tr></tr>
+    <tr><td>Tel : </td><td>{{responsable.tel}}</td></tr></tr>
+    <tr><td>Mail : </td><td>{{responsable.mail}}</td></tr></tr>
+ </table>
+ </br>
+<a href="{{ path('responsableLister')}}">Lister</a>
+    </body>
+    {% endblock %}

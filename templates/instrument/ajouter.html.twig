@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+   {% block head %}
+      {% block styleAndJS %}
+          <link href="../../public/css/metro-all.css" rel="stylesheet" >
+          <link href="../../public/css/style.css" rel="stylesheet" >
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+          <script type="text/javascript" src="../../public/js/metro.js"></script>
+      {% endblock %}
+    {% endblock %}
+{% block body %}
+  {# templates/instrument/ajouter.html.twig #}
+  {{ form_start(form) }}
+  <div class="cell-md-4" style="background-color: white;">
+    <div class="info-panel-header bg-black fg-white text-bold">
+      <h4> Ajout d'un nouvel instrument. </h4>
+    </div>
+  {{ form_widget(form) }}
+  {{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

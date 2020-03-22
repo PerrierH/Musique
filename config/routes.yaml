@@ -1,0 +1,108 @@
+accueil:
+    path: /
+    controller: App\Controller\EMusicController::index
+
+connexion:
+    path: /login
+    controller: App\Controller\CompteController::connexion
+
+deconnexion:
+    path: /login
+    controller: App\Controller\CompteController::deconnexion
+
+interventionAjouter:
+    path: /intervention/ajouter
+    controller: App\Controller\InterventionController::ajouterIntervention
+interventionConsulter:
+    path: /intervention/consulter/{id}
+    controller: App\Controller\InterventionController::consulterIntervention
+interventionLister:
+    path: /intervention/lister
+    controller: App\Controller\InterventionController::listerIntervention
+eleveAjouter:
+    path: /eleve/ajouter
+    controller: App\Controller\EleveController::ajouterEleve
+eleveConsulter:
+    path: /eleve/consulter/{id}
+    controller: App\Controller\EleveController::consulterEleve
+eleveLister:
+    path: /eleve/lister
+    controller: App\Controller\EleveController::listerEleve
+eleveListerResponsable:
+    path: /eleve/lister
+    controller: App\Controller\EleveController::listerEleve
+responsableAjouter:
+    path: /responsable/ajouter
+    controller: App\Controller\ResponsableController::ajouterResponsable
+responsableConsulter:
+    path: /responsable/consulter/{id}
+    controller: App\Controller\ResponsableController::consulterResponsable
+responsableLister:
+    path: /responsable/lister
+    controller: App\Controller\ResponsableController::listerResponsable
+responsableListerEleve:
+    path: /responsable/listerEleve/{idResponsable}
+    controller: App\Controller\ResponsableController::listerEleve
+instrumentAjouter:
+    path: /instrument/ajouter
+    controller: App\Controller\InstrumentController::ajouterInstrument
+instrumentConsulter:
+    path: /instrument/consulter/{id}
+    controller: App\Controller\InstrumentController::consulterInstrument
+instrumentLister:
+    path: /instrument/lister
+    controller: App\Controller\InstrumentController::listerInstrument
+instrumentModifier:
+    path: /instrument/modifier/{id}
+    controller: App\Controller\InstrumentController::modifierInstrument
+accessoireAjouter:
+    path: /accessoire/ajouter
+    controller: App\Controller\AccessoireController::ajouterAccessoire
+accessoireConsulter:
+    path: /accessoire/consulter/{id}
+    controller: App\Controller\AccessoireController::consulterAccessoire
+accessoireLister:
+    path: /accessoire/lister
+    controller: App\Controller\AccessoireController::listerAccessoire
+accessoireModifier:
+    path: /accessoire/modifier/{id}
+    controller: App\Controller\AccessoireController::modifierAccessoire
+professeurAjouter:
+    path: /professeur/ajouter
+    controller: App\Controller\ProfesseurController::ajouterProfesseur
+professeurConsulter:
+    path: /professeur/consulter/{id}
+    controller: App\Controller\ProfesseurController::consulterProfesseur
+professeurLister:
+    path: /professeur/lister
+    controller: App\Controller\ProfesseurController::listerProfesseur
+professeurModifier:
+    path: /professeur/modifier/{id}
+    controller: App\Controller\ProfesseurController::modifierProfesseur
+professionnelLister:
+    path: /professionnel/lister
+    controller: App\Controller\ProfessionnelController::listerProfessionnel
+professionnelAjouter:
+    path: /professionnel/ajouter
+    controller: App\Controller\ProfessionnelController::ajouterProfessionnel
+professionnelConsulter:
+    path: /professionnel/consulter/{id}
+    controller: App\Controller\ProfessionnelController::consulterProfessionnel
+professionnelModifier:
+    path: /professionnel/modifier/{id}
+    controller: App\Controller\ProfessionnelController::modifierProfessionnel
+professionnelSupprimer:
+    path: /professionnel/supprimer/{id}
+    controller: App\Controller\ProfessionnelController::supprimerProfessionnel
+coursLister:
+    path: /cours/lister
+    controller: App\Controller\CoursController::listerCours
+coursAjouter:
+    path: /cours/ajouter
+    controller: App\Controller\CoursController::ajouterCours
+coursConsulter:
+    path: /cours/consulter/{id}
+    controller: App\Controller\CoursController::consulterCours
+coursModifier:
+    path: /cours/modifier/{id}
+    controller: App\Controller\CoursController::modifierCours

@@ -1,0 +1,25 @@
+body{
+	background-image: url('../img/fond.jpg')
+	
+}
+
+h3{
+	color: white;
+}
+
+.cell-md-4{
+
+	margin-top: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	
+
+	
+}
+
+.social-box{
+	margin-top: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
