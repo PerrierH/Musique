@@ -15,8 +15,12 @@
     <body>
       <ul id="nav" class="h-menu bg-cyan">
         <li><a href="{{ path('accueil')}}">E-MUSIC</a></li>
-
-        <li><!--a href="{{ path('connexion')}}">Connexion</a--></li>
+        {% if(app.user) %}
+        <li><a href="{{ path('deconnexion')}}">Déconnexion</a></li>
+        {% else %}
+        <li><a href="{{ path('connexion')}}">Connexion</a></li>
+        {% endif %}
+        
         <li>
       		<a class="dropdown-toggle">Intervention</a>
 

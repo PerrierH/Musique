@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CompteRepository")
  */
-class Compte
+class Compte implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -22,12 +22,12 @@ class Compte
     /**
      * @ORM\Column(type="string", length=50)
      */
-    private $identifiant;
+    private $username;
 
     /**
      * @ORM\Column(type="string", length=50)
      */
-    private $motDePasse;
+    private $password;
 
     /**
      * @ORM\Column(type="string", length=50)
@@ -49,40 +49,14 @@ class Compte
         return $this->id;
     }
 
-    public function getIdentifiant(): ?string
+    public function getPassword(): ?string
     {
-        return $this->identifiant;
+        return $this->password;
     }
 
-    public function setIdentifiant(string $identifiant): self
+    public function getUsername(): ?string
     {
-        $this->identifiant = $identifiant;
-
-        return $this;
-    }
-
-    public function getMotDePasse(): ?string
-    {
-        return $this->motDePasse;
-    }
-
-    public function setMotDePasse(string $motDePasse): self
-    {
-        $this->motDePasse = $motDePasse;
-
-        return $this;
-    }
-
-    public function getRole(): ?string
-    {
-        return $this->role;
-    }
-
-    public function setRole(string $role): self
-    {
-        $this->role = $role;
-
-        return $this;
+        return $this->username;
     }
 
     /**
@@ -116,9 +90,29 @@ class Compte
         return $this;
     }
 
-    public function getRoles() { return [‘ROLE_USER’]; }
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
+    {
+        // guarantee every user at least has ROLE_USER
+        return ['ROLE_USER'];
+    }
 
-    public function eraseCredentials() {}
-      
-    public function getSalt() {}
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
+    {
+        // not needed when using the "bcrypt" algorithm in security.yaml
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
 }

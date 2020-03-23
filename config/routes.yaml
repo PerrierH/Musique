@@ -1,15 +1,12 @@
 accueil:
     path: /
     controller: App\Controller\EMusicController::index
-
 connexion:
     path: /login
     controller: App\Controller\CompteController::connexion
-
 deconnexion:
-    path: /login
+    path: /logout
     controller: App\Controller\CompteController::deconnexion
-
 interventionAjouter:
     path: /intervention/ajouter
     controller: App\Controller\InterventionController::ajouterIntervention

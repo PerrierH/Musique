@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class CompteController extends AbstractController
 {
@@ -17,8 +18,7 @@ class CompteController extends AbstractController
         ]);
     }
 
-    public function connexion()
-    {
+    public function connexion(){
     return $this->render('compte/login.html.twig');
     }
 
